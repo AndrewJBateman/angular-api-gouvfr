@@ -1,0 +1,29 @@
+form {
+  background: rgb(238, 222, 222);
+  width: 50%;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100% !important;
+    font: {
+      family: serif;
+      weight: bold;
+      size: 1em;
+    }
+  }
+}
+
+mat-card {
+  max-width: 600px;
+
+  mat-card-title {
+    text-align: left;
+  }
+
+  mat-card-subtitle {
+    text-align: left;
+  }
+}

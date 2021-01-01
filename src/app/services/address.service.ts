@@ -12,10 +12,12 @@ export class AddressService {
   // search geo.api.gouv.fr using q search parameter, default limit = 5
   search(value: any): Observable<any> {
     if (typeof value === 'string' && value.length >= 4) {
-      const params = new HttpParams().set('q', value);
-      console.log('search params: ', params);
+      let params = new HttpParams();
+      params = params.append('q', value);
+      params = params.append('limit', '15');
+      console.log('params: ', params);
       return this.httpClient.get<GeocodeJSON>(
-        AddressService.BASE_URL + '/search',
+        `${AddressService.BASE_URL}/search`,
         { params }
       );
     } else {

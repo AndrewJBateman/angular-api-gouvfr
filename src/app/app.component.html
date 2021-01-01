@@ -1,24 +1,29 @@
-<div style="text-align: center">
-  <h1>Search geo.api.gouv.fr using address autocomplete</h1>
+<div style="text-align: left">
+  <h1>Search geo.api.gouv.fr</h1>
+  <h4>Search by house, street, locality, city, region or country</h4>
 </div>
 
-<form class="search-form">
-  <mat-form-field class="search-full-width">
+<form class="search-form-input">
+  <mat-form-field class="search-full-width" appearance="fill">
     <input
+      class="search-input"
       type="text"
-      placeholder="Type street name or town"
-      aria-label="Number"
+      placeholder="Enter query"
+      aria-label="query input field"
       matInput
       [formControl]="formControl"
       [matAutocomplete]="auto"
     />
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+
+    <!--autocomplete address using displayFctn to list options-->
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
       <mat-option *ngIf="isLoading" class="is-loading"
-        ><mat-spinner diameter="40"></mat-spinner
-      ></mat-option>
+        >
+        <mat-progress-bar mode="query"></mat-progress-bar>
+    </mat-option>
       <ng-container *ngIf="!isLoading">
         <mat-option *ngFor="let option of options" [value]="option">
-          {{ displayFn(option) }}
+          {{ displayFctn(option) }}
         </mat-option>
       </ng-container>
     </mat-autocomplete>
@@ -26,10 +31,14 @@
 </form>
 
 <pre>
-  isLoading : {{ isLoading }},
   selectedAddress : {{ formControl.value | json }}
   options: {{ options | json }}
 </pre>
-<p>isLoading : {{ isLoading }}</p>
-  <p>selectedAddress : {{ formControl.value | json }}</p>
-  <p>options: {{ options | json }}</p>
+
+<!-- <mat-card>
+  <pre>
+    isLoading : {{ isLoading }},
+    selectedAddress : {{ formControl.value | json }}
+    options: {{ options | json }}
+  </pre>
+</mat-card> -->

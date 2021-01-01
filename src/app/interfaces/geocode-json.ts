@@ -1,4 +1,4 @@
-// This file format from GeocodeJSON is a an extension of the GeoJSON standard that aim to define places results.
+// This file format from GeocodeJSON is a an extension of the GeoJSON standard that aim to define place results.
 // Files implementing GeocodeJSON MUST be valid GeoJSON and valid JSON files.
 
 export class GeocodeJSON {

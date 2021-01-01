@@ -22,25 +22,27 @@ export class AppComponent {
   options: [];
   isLoading = false;
 
-  constructor(private adresseService: AddressService) {
+  // after change in form input, show loading spinner, search run addressService
+  // Set loading spinner to false once complete and subscribe to response
+  constructor(private addressService: AddressService) {
     this.formControl.valueChanges
       .pipe(
         debounceTime(300),
         startWith(''),
         tap(() => (this.isLoading = true)),
         switchMap((value) =>
-          this.adresseService
+          this.addressService
             .search(value)
             .pipe(finalize(() => (this.isLoading = false)))
         )
       )
       .subscribe((response) => {
-        console.log(response);
-        this.options = response.features;
+        console.log('response', response);
+        this.options = response.features; // array of objects, each with geometry & property arrays
       });
   }
 
-  displayFn(option?: FeatureGeocodeJSON): string | undefined {
+  displayFctn(option?: FeatureGeocodeJSON): string | undefined {
     return option ? option.properties.label : undefined;
   }
 }
