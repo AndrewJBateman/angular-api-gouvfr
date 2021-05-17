@@ -1,29 +1,33 @@
-form {
-  background: rgb(238, 222, 222);
-  width: 50%;
+.container {
+  padding: 40px;
 
-  mat-form-field {
-    width: 100%;
-  }
+  form {
+    background: rgb(216, 230, 236);
+    width: 400px;
 
-  .search-input {
-    width: 100% !important;
-    font: {
-      family: serif;
-      weight: bold;
-      size: 1em;
+    mat-form-field {
+      width: 400px;
+    }
+
+    .search-input {
+      width: 400px !important;
+      font: {
+        family: serif;
+        weight: bold;
+        size: 1em;
+      }
     }
   }
-}
 
-mat-card {
-  max-width: 600px;
+  mat-card {
+    max-width: 600px;
 
-  mat-card-title {
-    text-align: left;
-  }
+    mat-card-title {
+      text-align: left;
+    }
 
-  mat-card-subtitle {
-    text-align: left;
+    mat-card-subtitle {
+      text-align: left;
+    }
   }
 }

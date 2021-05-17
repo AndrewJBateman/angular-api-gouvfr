@@ -1,44 +1,45 @@
-<div style="text-align: left">
-  <h1>Search geo.api.gouv.fr</h1>
-  <h4>Search by house, street, locality, city, region or country</h4>
-</div>
+<div class="container">
+  <div style="text-align: left">
+    <h1>Search geo.api.gouv.fr</h1>
+    <h4>Search by house, street, locality, city, region or country</h4>
+  </div>
 
-<form class="search-form-input">
-  <mat-form-field class="search-full-width" appearance="fill">
-    <input
-      class="search-input"
-      type="text"
-      placeholder="Enter query"
-      aria-label="query input field"
-      matInput
-      [formControl]="formControl"
-      [matAutocomplete]="auto"
-    />
+  <form class="search-form-input">
+    <mat-form-field class="search-full-width" appearance="fill">
+      <input
+        class="search-input"
+        type="text"
+        placeholder="Enter query"
+        aria-label="query input field"
+        matInput
+        [formControl]="formControl"
+        [matAutocomplete]="auto"
+      />
 
-    <!--autocomplete address using displayFctn to list options-->
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
-      <mat-option *ngIf="isLoading" class="is-loading"
-        >
-        <mat-progress-bar mode="query"></mat-progress-bar>
-    </mat-option>
-      <ng-container *ngIf="!isLoading">
-        <mat-option *ngFor="let option of options" [value]="option">
-          {{ displayFctn(option) }}
+      <!--autocomplete address using displayFctn to list options-->
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
+        <mat-option *ngIf="isLoading" class="is-loading">
+          <mat-progress-bar mode="query"></mat-progress-bar>
         </mat-option>
-      </ng-container>
-    </mat-autocomplete>
-  </mat-form-field>
-</form>
+        <ng-container *ngIf="!isLoading">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{ displayFctn(option) }}
+          </mat-option>
+        </ng-container>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
 
-<pre>
-  selectedAddress : {{ formControl.value | json }}
-  options: {{ options | json }}
-</pre>
-
-<!-- <mat-card>
   <pre>
-    isLoading : {{ isLoading }},
     selectedAddress : {{ formControl.value | json }}
     options: {{ options | json }}
   </pre>
-</mat-card> -->
+
+  <!-- <mat-card>
+    <pre>
+      isLoading : {{ isLoading }},
+      selectedAddress : {{ formControl.value | json }}
+      options: {{ options | json }}
+    </pre>
+  </mat-card> -->
+</div>

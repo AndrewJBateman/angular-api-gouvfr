@@ -27,11 +27,11 @@
 ## :books: General info
 
 * [API address search](https://geo.api.gouv.fr/adresse) uses the [geocoders geocodespec](https://github.com/geocoders/geocodejson-spec) standard geojson response format
-* RxJS subscriptions objects used to represents the execution of observables
+* RxJS subscriptions objects used to represents the execution of observables. Note, rxjs kept at v6 to avoid errors from combination of rxjs v7 & Angular v12
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/result.jpg)
+![Example screenshot](./img/search.png)
 
 ## :signal_strength: Technologies
 
@@ -56,20 +56,47 @@
 
 ## :computer: Code Examples
 
-* extract from `` tba
+* extract from `app.component.html` client form input field with autocomplete
 
-```typescript
+```html
+<form class="search-form-input">
+  <mat-form-field class="search-full-width" appearance="fill">
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Enter query"
+      aria-label="query input field"
+      matInput
+      [formControl]="formControl"
+      [matAutocomplete]="auto"
+    />
+
+    <!--autocomplete address using displayFctn to list options-->
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
+      <mat-option *ngIf="isLoading" class="is-loading">
+        <mat-progress-bar mode="query"></mat-progress-bar>
+      </mat-option>
+      <ng-container *ngIf="!isLoading">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{ displayFctn(option) }}
+        </mat-option>
+      </ng-container>
+    </mat-autocomplete>
+  </mat-form-field>
+  </form>
 
 ```
 
 ## :cool: Features
 
 * auto address complete
+* No API key required
+* Material module created and passed to modules that need it via the Shared module. The need for shared modules is debated and is set up here for the app to grow in size.
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work. Updated may 2021
-* To-Do: Fix errors
+* Status: Simple Working address search. Updated may 2021
+* To-Do: Change to Mat-cards in template. Consider multilingual option menu
 
 ## :clap: Inspiration
 
