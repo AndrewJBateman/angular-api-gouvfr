@@ -35,7 +35,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
 * [Angular Material Autocomplete](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
@@ -67,12 +67,12 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: In work
+* Status: In work. Updated may 2021
 * To-Do: Fix errors
 
 ## :clap: Inspiration
 
-* [](https://geo.api.gouv.fr/) "Interrogez les référentiels géographiques plus facilement."
+* [geo.api.gouv.fr homepage](https://geo.api.gouv.fr/) "Interrogez les référentiels géographiques plus facilement."
 * [Geocoders: geocodejson-spec: Github repo](https://github.com/geocoders/geocodejson-spec) DRAFT: attempt to have standard geojson responses from geocoders.
 
 ## :file_folder: License
