@@ -36,6 +36,7 @@
 ## :signal_strength: Technologies
 
 * [Angular v12](https://angular.io/)
+* [Angular Material v12](https://material.angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
 * [Angular Material Autocomplete](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
