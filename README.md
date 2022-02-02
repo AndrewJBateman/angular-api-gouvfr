@@ -27,7 +27,7 @@
 ## :books: General info
 
 * [API address search](https://geo.api.gouv.fr/adresse) uses the [geocoders geocodespec](https://github.com/geocoders/geocodejson-spec) standard geojson response format
-* RxJS subscriptions objects used to represents the execution of observables. Note, rxjs kept at v6 to avoid errors from combination of rxjs v7 & Angular v12
+* RxJS subscriptions objects used to represents the execution of observables.
 
 ## :camera: Screenshots
 
@@ -35,12 +35,12 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v12](https://angular.io/)
-* [Angular Material v12](https://material.angular.io/)
+* [Angular v13](https://angular.io/)
+* [Angular Material v13](https://material.angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
-* [Angular Material Autocomplete](https://material.angular.io/components/autocomplete/api)
+* [Angular Material Autocomplete v13](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
-* [RxJS Library v6](https://angular.io/guide/rx-library) used to handle async operations using observables.
+* [RxJS Library v7](https://angular.io/guide/rx-library) used to handle async operations using observables.
 * [RxJS debounce time](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime) added to user search to emit a value with a delay after user has stopped typing
 
 ## :floppy_disk: Setup
@@ -95,7 +95,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Simple Working address search. Updated may 2021
+* Status: Simple Working address search.
 * To-Do: Change to Mat-cards in template. Consider multilingual option menu
 
 ## :clap: Inspiration
