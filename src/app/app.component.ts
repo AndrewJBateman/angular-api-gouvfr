@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { AddressService } from './services/address.service';
 import {
   debounceTime,
@@ -18,7 +18,7 @@ import { FeatureGeocodeJSON } from './interfaces/geocode-json';
 export class AppComponent {
   title = 'angular-api-gouvfr';
 
-  formControl = new FormControl();
+  formControl = new UntypedFormControl();
   options: [];
   isLoading = false;
 
