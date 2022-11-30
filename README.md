@@ -11,17 +11,17 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular API Gouv.fr](#zap-angular-api-gouvfr)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:flashlight: Testing](#flashlight-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -35,8 +35,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
-* [Angular Material v14](https://material.angular.io/)
+* [Angular v15](https://angular.io/)
+* [Angular Material v15](https://material.angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
 * [Angular Material Autocomplete v14](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
