@@ -18,16 +18,11 @@
       }
     }
   }
-
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card {
     max-width: 600px;
+    /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
 
-    mat-card-title {
-      text-align: left;
-    }
-
-    mat-card-subtitle {
-      text-align: left;
-    }
   }
 }
