@@ -26,7 +26,7 @@
 
 ## :books: General info
 
-* [API address search](https://geo.api.gouv.fr/adresse) uses the [geocoders geocodespec](https://github.com/geocoders/geocodejson-spec) standard geojson response format
+* [API address search](https://geo.api.gouv.fr/adresse) uses the [geocoders geocodespec](https://github.com/geocoders/geocodejson-spec) standard geojson response format (6 years ago)
 * RxJS subscriptions objects used to represents the execution of observables.
 
 ## :camera: Screenshots
@@ -35,10 +35,10 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v15](https://angular.io/)
-* [Angular Material v15](https://material.angular.io/)
+* [Angular v16](https://angular.io/)
+* [Angular Material v16](https://material.angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
-* [Angular Material Autocomplete v14](https://material.angular.io/components/autocomplete/api)
+* [Angular Material Autocomplete v16](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle async operations using observables.
 * [RxJS debounce time](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime) added to user search to emit a value with a delay after user has stopped typing
@@ -51,8 +51,7 @@
 
 ## :flashlight: Testing
 
-* Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* n/a
 
 ## :computer: Code Examples
 
@@ -95,8 +94,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Simple Working address search.
-* To-Do: Change to Mat-cards in template. Consider multilingual option menu
+* Status: Simple Working address search. Only works with Ivy compiler disabled.
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
@@ -109,4 +108,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
