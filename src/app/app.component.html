@@ -14,32 +14,36 @@
         matInput
         [formControl]="formControl"
         [matAutocomplete]="auto"
-      />
+        />
 
-      <!--autocomplete address using displayFctn to list options-->
-      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
-        <mat-option *ngIf="isLoading" class="is-loading">
-          <mat-progress-bar mode="query"></mat-progress-bar>
-        </mat-option>
-        <ng-container *ngIf="!isLoading">
-          <mat-option *ngFor="let option of options" [value]="option">
-            {{ displayFctn(option) }}
-          </mat-option>
-        </ng-container>
-      </mat-autocomplete>
-    </mat-form-field>
-  </form>
+        <!--autocomplete address using displayFctn to list options-->
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFctn">
+          @if (isLoading) {
+            <mat-option class="is-loading">
+              <mat-progress-bar mode="query"></mat-progress-bar>
+            </mat-option>
+          }
+          @if (!isLoading) {
+            @for (option of options; track option) {
+              <mat-option [value]="option">
+                {{ displayFctn(option) }}
+              </mat-option>
+            }
+          }
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
 
-  <pre>
-    selectedAddress : {{ formControl.value | json }}
-    options: {{ options | json }}
-  </pre>
-
-  <mat-card class="data-card">
     <pre>
-      isLoading : {{ isLoading }},
       selectedAddress : {{ formControl.value | json }}
       options: {{ options | json }}
     </pre>
-  </mat-card>
-</div>
+
+    <mat-card class="data-card">
+      <pre>
+        isLoading : {{ isLoading }},
+        selectedAddress : {{ formControl.value | json }}
+        options: {{ options | json }}
+      </pre>
+    </mat-card>
+  </div>
