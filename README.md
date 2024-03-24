@@ -35,10 +35,10 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v16](https://angular.io/)
-* [Angular Material v16](https://material.angular.io/)
+* [Angular v17](https://angular.io/)
+* [Angular Material v17](https://material.angular.io/)
 * [Angular Formcontrol](https://angular.io/api/forms/FormControl) used to track the value and validation status of an individual form control
-* [Angular Material Autocomplete v16](https://material.angular.io/components/autocomplete/api)
+* [Angular Material Autocomplete v17](https://material.angular.io/components/autocomplete/api)
 * [SCSS](https://sass-lang.com/guide) extended CSS syntax using SASS pre-compiler
 * [RxJS Library v7](https://angular.io/guide/rx-library) used to handle async operations using observables.
 * [RxJS debounce time](https://rxjs-dev.firebaseapp.com/api/operators/debounceTime) added to user search to emit a value with a delay after user has stopped typing
